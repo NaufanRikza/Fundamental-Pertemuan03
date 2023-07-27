@@ -161,7 +161,11 @@ const typeDetector = (data) => {
 const changeCharacter = (word = "", toChange = "") => {
   let finalWord = "";
   for (let i = 0; i < word.length; i++) {
-    if (word[i] === toChange || word[i] === toChange.toUpperCase()) {
+    if (
+      word[i] === toChange ||
+      word[i] === toChange.toUpperCase() ||
+      word[i] === toChange.toLowerCase()
+    ) {
       finalWord = finalWord + "*";
     } else {
       finalWord = finalWord + word[i];
@@ -183,7 +187,7 @@ console.log("Rp currency format");
 console.log(formatRupiah(300000000));
 console.log();
 console.log("Remove");
-console.log(removeString("hello world", "el"));
+console.log(removeString("hello world", "ell"));
 console.log();
 console.log("Camel case string");
 console.log(camelCase("hello my name"));
@@ -198,7 +202,7 @@ console.log("compare");
 console.log(compare(4, 10));
 console.log();
 console.log("sort");
-console.log(sort(40, 60, 10));
+console.log(sort(90, 60, 30));
 console.log();
 console.log("Type detector");
 console.log(typeDetector(true));
